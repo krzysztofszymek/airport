@@ -1,0 +1,24 @@
+.AirportsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        color: white;
+        width: 3rem;
+        height: auto;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        border-radius: 0.2rem;
+        background-color: rgb(66, 66, 66);
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 3px 2px black;
+    }
+
+    .active {
+        color: black;
+        background-color: white;
+    }
+}
