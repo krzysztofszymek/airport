@@ -5,9 +5,12 @@ import Graph from "./Graph";
 import AirportsContainer from "./UI/AirportsContainer/AirportsContainer";
 import RouteContainer from './UI/RouteContainer/RouteContainer';
 import Card from './UI/Card/Card';
+import { useState } from 'react';
 
 function Airport() {
     const g = new Graph();
+    const [from, setFrom] = useState();
+    const [to, setTo] = useState();
 
     // Dodawanie wierzchołków grafu: Nazwy portów docelowych
     Names.forEach(element => { 
@@ -30,7 +33,7 @@ function Airport() {
         <div className="airport">
             <Card>
                 <h3>Starting from: </h3>
-                <AirportsContainer data={Names}/>
+                <AirportsContainer data={Names} onChooseFrom={setFrom} />
             </Card>
             <Card>
                 <h3>Path: </h3>
@@ -38,7 +41,7 @@ function Airport() {
             </Card>
             <Card>
                 <h3>Direciton to:</h3>
-                <AirportsContainer data={Names}/>
+                <AirportsContainer data={Names} onChooseTo={setTo} />
             </Card>
         </div>
     );

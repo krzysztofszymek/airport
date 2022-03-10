@@ -11,9 +11,11 @@ function AirportsContainer(props) {
                 data.map((name) => {
                     return (
                         <button 
+                            key={name}
                             className={activeButton === name ? 'active' : ''} 
                             onClick={() => {
                                     console.log(name);
+                                    props.onChooseFrom(name);
                                     setActiveButton(name);}}
                             value={name}
                             >
