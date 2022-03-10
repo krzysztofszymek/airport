@@ -14,7 +14,6 @@ function AirportsContainer(props) {
                             key={name}
                             className={activeButton === name ? 'active' : ''} 
                             onClick={() => {
-                                    console.log(name);
                                     props.onChooseFrom(name);
                                     setActiveButton(name);}}
                             value={name}
