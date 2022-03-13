@@ -22,7 +22,7 @@ function Airport() {
                 </Card>
                 <Card>
                     {
-                        from === to ? <h2>Choose your starting point and destination !</h2> : <div><RouteContainer From={from} To={to} /></div>
+                        (to === undefined || from === undefined) ? <h2>Choose your starting point and destination !</h2> : <div><RouteContainer From={from} To={to} /></div>
                     }
                 </Card>
                 <Card>

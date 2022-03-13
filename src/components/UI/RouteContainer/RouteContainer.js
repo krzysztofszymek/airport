@@ -35,9 +35,8 @@ function RouteContainer(props) {
 
     return (
         <div className="routeContainer">
-            <h2>Path: </h2>
             {
-                route !== undefined ? <Route data={route} /> : ''
+                from === to ? <h2>You're already here !</h2> : <div><h2>Path: </h2> <Route data={route} /></div>
             }
         </div>
     );

@@ -11,9 +11,9 @@ class Graph {
         }
     }
 
-    addEdge(v1, v2, cost) {
-        this.adjList[v1][v2] = cost;
-        this.adjList[v2][v1] = cost;
+    addEdge(vertex1, vertex2, cost) {
+        this.adjList[vertex1][vertex2] = cost;
+        this.adjList[vertex2][vertex1] = cost;
     }
 
     Dijkstra(start, finish) {
@@ -21,16 +21,16 @@ class Graph {
         const checkList = new PriorityQueue();
         const prev = {};
 
-        let current;
+        let current;                                        
         let result = [];
-        for (let v in this.adjList) {
-            if (v === start) {
-                costFromStartTo[v] = 0;
-                checkList.enqueue(v, 0);
+        for (let vertex in this.adjList) {
+            if (vertex === start) {
+                costFromStartTo[vertex] = 0;
+                checkList.enqueue(vertex, 0);
             } else {
-                costFromStartTo[v] = Infinity;
+                costFromStartTo[vertex] = Infinity;
             }
-            prev[v] = null;
+            prev[vertex] = null;
         }
 
         while (checkList.values.length) {
