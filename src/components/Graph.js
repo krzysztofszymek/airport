@@ -2,18 +2,18 @@ import PriorityQueue from "./PriorityQueue";
 
 class Graph {
     constructor() {
-        this.adjacencyList = {};
+        this.adjList = {};
     }
 
     addVertex(name) {
-        if (!this.adjacencyList[name]) {
-            this.adjacencyList[name] = {};
+        if (!this.adjList[name]) {
+            this.adjList[name] = {};
         }
     }
 
-    addEdge(vert1, vert2, weight) {
-        this.adjacencyList[vert1][vert2] = weight;
-        this.adjacencyList[vert2][vert1] = weight;
+    addEdge(v1, v2, cost) {
+        this.adjList[v1][v2] = cost;
+        this.adjList[v2][v1] = cost;
     }
 
     Dijkstra(start, finish) {
@@ -23,14 +23,14 @@ class Graph {
 
         let current;
         let result = [];
-        for (let vert in this.adjacencyList) {
-            if (vert === start) {
-                costFromStartTo[vert] = 0;
-                checkList.enqueue(vert, 0);
+        for (let v in this.adjList) {
+            if (v === start) {
+                costFromStartTo[v] = 0;
+                checkList.enqueue(v, 0);
             } else {
-                costFromStartTo[vert] = Infinity;
+                costFromStartTo[v] = Infinity;
             }
-            prev[vert] = null;
+            prev[v] = null;
         }
 
         while (checkList.values.length) {
@@ -43,8 +43,8 @@ class Graph {
                 break;
             }
             else {
-                for (let neighbor in this.adjacencyList[current]) {
-                    let costToNeighbor = costFromStartTo[current] + this.adjacencyList[current][neighbor];
+                for (let neighbor in this.adjList[current]) {
+                    let costToNeighbor = costFromStartTo[current] + this.adjList[current][neighbor];
                     if (costToNeighbor < costFromStartTo[neighbor]) {
                         costFromStartTo[neighbor] = costToNeighbor;
                         prev[neighbor] = current;

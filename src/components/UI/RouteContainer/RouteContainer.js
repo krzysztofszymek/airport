@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Graph from "../../Graph";
 import Names from "../../AirportData/AirportNames";
 import Routes from "../../AirportData/AirportRoutes";
+import Route from "../Route/Route"
 
 function RouteContainer(props) {
     const g = new Graph();
@@ -34,8 +35,9 @@ function RouteContainer(props) {
 
     return (
         <div className="routeContainer">
+            <h2>Path: </h2>
             {
-                route !== undefined ? route.map((element) => {return <p>{element}</p>}) : ''
+                route !== undefined ? <Route data={route} /> : ''
             }
         </div>
     );

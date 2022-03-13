@@ -10,19 +10,26 @@ function Airport() {
     const [to, setTo] = useState();
 
     return (
-        <div className="airport">
-            <Card>
-                <h3>Starting from: </h3>
-                <AirportsContainer data={Names} onChooseFrom={setFrom} />
-            </Card>
-            <Card>
-                <h3>Path: </h3>
-                <RouteContainer From={from} To={to} />
-            </Card>
-            <Card>
-                <h3>Direciton to:</h3>
-                <AirportsContainer data={Names} onChooseFrom={setTo} />
-            </Card>
+        <div className="appContainer">
+            <div className="header">
+                <img className='heading' src='/img/header.png' alt='Header'/>
+                <img className='plane' src='/img/airplane.png' alt='Airplane'/>
+            </div>
+            <div className="airport">
+                <Card>
+                    <h2>Starting from: </h2>
+                    <AirportsContainer data={Names} onChooseFrom={setFrom} />
+                </Card>
+                <Card>
+                    {
+                        from === to ? <h2>Choose your starting point and destination !</h2> : <div><RouteContainer From={from} To={to} /></div>
+                    }
+                </Card>
+                <Card>
+                    <h2>Direction to:</h2>
+                    <AirportsContainer data={Names} onChooseFrom={setTo} />
+                </Card>
+            </div>
         </div>
     );
 }
