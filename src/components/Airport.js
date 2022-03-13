@@ -4,6 +4,7 @@ import AirportsContainer from "./UI/AirportsContainer/AirportsContainer";
 import RouteContainer from './UI/RouteContainer/RouteContainer';
 import Card from './UI/Card/Card';
 import { useState } from 'react';
+import { FaGithub, FaPortrait } from "react-icons/fa";
 
 function Airport() {
     const [from, setFrom] = useState();
@@ -29,6 +30,20 @@ function Airport() {
                     <h2>Direction to:</h2>
                     <AirportsContainer data={Names} onChooseFrom={setTo} />
                 </Card>
+            </div>
+            <div className="footer">
+                <a href="https://krzysztof-szymek-portfolio.netlify.app/">
+                    <div className='icon'>
+                        <FaPortrait size={30}/>
+                    </div>
+                    <div className='text'> <big>Portfolio</big></div>
+                </a>
+                <a href="https://github.com/krzysztofszymek/airport">
+                    <div className='icon'>
+                        <FaGithub size={30}/>
+                    </div>
+                    <div className='text'> <big>GitHub</big></div>
+                </a>
             </div>
         </div>
     );

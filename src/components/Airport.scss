@@ -28,4 +28,24 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    .footer {
+        padding: 0 2rem;
+        height: 3rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+
+        a {
+            display: flex;
+            //flex-direction: row;
+            padding: 0 .5rem;
+            margin: 1rem 0;
+            align-items: center;
+            width: max-content;
+            color: black;
+            text-decoration: none;
+        }
+    }
 }
