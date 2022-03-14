@@ -14,7 +14,7 @@ The App is used to determine the shortest (or fastest) route between chosen airp
 ## Website
 Link: https://airports-fastest-route.netlify.app/
 
-![fastest-route](https://user-images.githubusercontent.com/63580276/158051914-ec0ebe99-b675-4791-afa5-f43d2411d526.PNG)
+![fastest-route](https://user-images.githubusercontent.com/63580276/158134512-46a913da-2f13-4e31-91ae-c537d7a25e41.PNG)
 
 ## Resources
 
