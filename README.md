@@ -1,7 +1,7 @@
 # Airport Application
 
 ## Description
-The App is used to determine the shortest (or fastest) route between chosen airports. Using Dijkstra's Algorithm it determinates the fastest route between chosen airports (starting point and destination). The most efficient path is then given out for the user to see.
+The App is used to determine the shortest (or fastest) route between chosen airports. Using Dijkstra's Algorithm it determinates the fastest route between chosen airports (starting point and destination). The most efficient path is then given out for the user to see. In order to help to determine the shortest path the data provided was based on real distances between airports devided by 100.
 
 ## Website
 Link: https://airports-fastest-route.netlify.app/
