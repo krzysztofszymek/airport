@@ -4,4 +4,9 @@ body {
   font-family: Roboto sans-serif;
   background-color: rgb(49, 48, 48);
   background-image: url('/public/img/map.jpg');
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  background-attachment: fixed;
 }
